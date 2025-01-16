@@ -1,1 +1,1 @@
-Future projcts of the academy ONE Oracle
+Future projects of the academy ONE Oracle
