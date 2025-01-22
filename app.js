@@ -6,7 +6,8 @@
     let numSecret = 5;
     let numUser = 0;
     let attempts = 1;
-    let word = 'attempt';
+   // let word = 'attempt';
+    let attemptMax = 3;
 
     // process
     while (numUser != numSecret) {
@@ -18,7 +19,7 @@
     if (numUser == numSecret)
     {
         // alert("The number is correct: " + numUser); 
-        alert(`Correct!, The number is: ${numSecret}, Congratulations!, You do in: ${attempts}, ${word}`);
+        alert(`Congratulations!\nThe number correct is: ${numSecret} \nYou do in ${attempts}  ${attempts == 1 ? `* Attempt *` : ` AtEmPtS`} `);
     } else {
         if (numUser > numSecret){
             alert('The secret number is minor');
@@ -27,13 +28,15 @@
         }
 
         // increment attempts 
-        attempts = attempts + 1;
-        word  =  'attempt';
+        /* attempts = attempts + 1;
+        word  =  'attempt'; */
+        attempts ++;
+
+        if (attempts > attemptMax) {
+            alert(`****GAME OVER!*** \n*****Maxium of attempts!***** \n The Attempts was of: ${attemptMax}`);
+            break;
+        }
         
         //alert("Sorry!, Not's the number, try again");
     }
     }
-
-/*
-    prompt("***The number not's correct X***" + numUser);
- */
